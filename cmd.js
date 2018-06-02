@@ -2,16 +2,16 @@
 
 var program = require('commander');
 
-process.on('uncaughtException', (e) => {
+process.on('uncaughtException', function(e) {
     console.log(e);
     process.exit(1);
 });
 
-process.on('SIGINT', () => {
+process.on('SIGINT', function() {
     process.exit(0);
 });
 
-process.on('unhandledRejection', (reason, p) => {
+process.on('unhandledRejection', function(reason, p) {
     console.log('Unhandled Rejection at: Promise ', p, ' reason: ', reason);
 });
 
