@@ -23,4 +23,4 @@ program.parse(process.argv);
 
 var params = encodeURIComponent(program.args.join(' '));
 
-require('opn')('https://google.com/search?q=' + params);
+require('opn')('https://google.com/search?q=' + params, { wait: false });
